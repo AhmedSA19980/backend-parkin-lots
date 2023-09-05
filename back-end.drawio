@@ -1,0 +1,53 @@
+<mxfile host="65bd71144e">
+    <diagram id="u1E9WrUOCWWswPr-XbsA" name="Page-1">
+        <mxGraphModel dx="841" dy="1502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="build parking lots -&amp;gt; user searach for park-&amp;gt; parking detail(availability)-parking already booked-&amp;gt; print digital card" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="80" width="640" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="parkings are all booked(show start-end time)&amp;nbsp;&lt;br&gt;-return praking lots as availble after end time&lt;br&gt;-capacity how much parking lots availalbe&amp;nbsp;&lt;br&gt;1 means 1 parking lots etc&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="525" y="190" width="270" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="curved=1;endArrow=classic;html=1;entryX=0.693;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.15;exitY=-0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="160" as="sourcePoint"/>
+                        <mxPoint x="510" y="110" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="510" y="160"/>
+                            <mxPoint x="460" y="110"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="curved=1;endArrow=classic;html=1;entryX=-0.027;entryY=0.61;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="690" y="60" as="sourcePoint"/>
+                        <mxPoint x="720" y="-10" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="720" y="40"/>
+                            <mxPoint x="690" y="20"/>
+                            <mxPoint x="670" y="-10"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="represent the following&amp;nbsp;&lt;br&gt;-name&lt;br&gt;-locatoin&lt;br&gt;-start-end time&lt;br&gt;-an hourly price rate&lt;br&gt;-after 5 miniute not allowed to&lt;br&gt;cancel&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="-130" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="curved=1;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="80" as="sourcePoint"/>
+                        <mxPoint x="420" y="-20" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="450" y="80"/>
+                            <mxPoint x="400" y="30"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="AUTH" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="-110" width="60" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
