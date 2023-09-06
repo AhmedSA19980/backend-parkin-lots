@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import express, { Application, Request, Response } from "express";
+
 //const app = express.Router();
 const prisma = new PrismaClient();
 
@@ -26,5 +27,5 @@ export default function(app:Application){
       return res.status(200).json({ isUserDeleted: deletedUser });
     }
   });
-}
+  
 
