@@ -8,7 +8,7 @@ type User = {
   email:string
 }
 
-export default function(app:Application){
+export default function(app:Application ,args?:any){
   app.post("/delete_user", async (req: Request, res: Response) => {
     const { userId, email }: User = req.body;
 
