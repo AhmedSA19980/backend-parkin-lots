@@ -27,5 +27,5 @@ export default function(app:Application ,args?:any){
       return res.status(200).json({ isUserDeleted: deletedUser });
     }
   });
-  
+}  
 
