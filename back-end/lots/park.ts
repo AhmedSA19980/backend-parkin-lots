@@ -1,5 +1,6 @@
 import express, { Application,Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
+import { FieldValidation } from "../lib/lotValidation";
 const app = express.Router();
 const prisma = new PrismaClient();
 
@@ -16,19 +17,29 @@ export default function(app:Application){
    
   app.post("/parkinglots", async (req, res) => {
       const { location, capacity, hourlyRate, capacityUsed }:lots = req.body;
-      const parkinglot = await prisma.parkinglot.create({
-        data: {
-          location: location,
-          capacity: capacity,
-          capacityUsed:capacityUsed,
-          hourlyRate: hourlyRate,
+      
+      const capacityValidation = FieldValidation(capacity)
+      const locationValidation = FieldValidation(location)
 
-        },
-        include: {
-          vehicletype: true,
-        },
-      });
-
-      res.json(parkinglot)
+      if (capacityValidation.intgerFieldError ) {
+        res.status(400).json({ err: capacityValidation.intgerFieldError });
+      }
+      else if(locationValidation.stringFieldError){
+        res.status(400).json({ err: locationValidation.stringFieldError });
+      }else{
+     
+       const parkinglot = await prisma.parkinglot.create({
+         data: {
+           location: location,
+           capacity: capacity,
+           capacityUsed: capacityUsed,
+           hourlyRate: hourlyRate,
+         },
+         include: {
+           vehicletype: true,
+         },
+       });
+        res.status(200).json(parkinglot);
+      }
   })
 }
