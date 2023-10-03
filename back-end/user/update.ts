@@ -1,26 +1,22 @@
 import { PrismaClient } from "@prisma/client";
-import express, {Application ,Request, Response } from "express";
-const app = express.Router();
+import express, { Application, Request, Response } from "express";
 const prisma = new PrismaClient();
 
+export default function (app: Application, args?:any) {
+  app.post("/update_user", async (req: Request, res: Response) => {
+    const { name, email, password } = req.body;
 
+    // Find a user by their email address
+    const findUserByEmail = await prisma.user.findUnique({
+      where: {
+        email: email,
+      },
+    });
 
-
-export default function(app:Application){
-app.post("/update_user", async (req: Request, res: Response) => {
-  const { name, email, password } = req.body;
-
-  // Find a user by their email address
-  const user = await prisma.user.findUnique({
-    where: {
-      email: email,
-    },
-  });
-
-  // Update a user's name
-  if (!user) {
-    res.json("user not found! create user account");
-  } 
+    // Update a user's name
+    if (!findUserByEmail) {
+      res.json("user not found! create user account");
+    }
     const updatedUser = await prisma.user.update({
       where: {
         email: email,
@@ -31,6 +27,6 @@ app.post("/update_user", async (req: Request, res: Response) => {
       },
     });
     res.json(updatedUser);
-    console.log(user);
-});
+    console.log(findUserByEmail);
+  });
 }

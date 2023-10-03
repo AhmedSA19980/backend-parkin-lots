@@ -4,14 +4,10 @@ const prisma = new PrismaClient();
 import express, { Application, Request, Response } from "express";
 import { updateParkingLotCapacity } from "../lib/timebooking";
 import { isValidTime } from "../lib/validTime";
-import { start } from "repl";
-import { localTime } from "../lib/localtime";
 import Stripe from "stripe";
 import PAYMENTINTENT from '../lib/pay'
 
-const stripe = new Stripe(process.env.STRIPE_KEY as string, {
-  apiVersion: "2022-11-15",
-});
+
 
 const app = express();
 
@@ -33,6 +29,7 @@ type booking = {
 
 export  function Book_Lot(app: Application) {
   app.post("/booking", async (req: Request, res: Response) => {
+    
     const {
       startTime,
       endTime,
@@ -45,6 +42,7 @@ export  function Book_Lot(app: Application) {
     const parkinglot_id = await prisma.parkinglot.findUnique({
       where: { id: parkingLotId },
     });
+    
     const user_id = await prisma.user.findFirstOrThrow({
       where: { id: userId },
     });
@@ -62,6 +60,9 @@ export  function Book_Lot(app: Application) {
         return res
           .status(400)
           .json({ error: "Start time and end time must be in the future" });
+    }
+    if (user_id.isuserdeleted){
+       return res.status(400).json({error:"user id deleted"})
     }
 
     /**/
@@ -85,7 +86,9 @@ export  function Book_Lot(app: Application) {
       if (
         parkinglot_id.capacityUsed < 0 ||
         parkinglot_id.capacityUsed >= parkinglot_id.capacity 
-      ){return res.status(400).json({error:"no, free parking lots"})}
+      )
+      {return res.status(400).json({error:"no, free parking lots"})}
+      
       else{    
           const book_park = await prisma.booking.create({
             data: {

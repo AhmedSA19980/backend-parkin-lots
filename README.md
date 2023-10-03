@@ -12,12 +12,18 @@ When you use this string as input in Prisma, it is converted to UTC time by subt
 
 3- pay attention to time zone of different countries == diverse time zone
 
+ 
+https://blog.logrocket.com/password-hashing-node-js-bcrypt/
+[x] validate exiting user.email 
 
- # done
- [] auth system 
- [x] fix book route create table even response send 400 
- [x] query book properties plus, user properties . exclude pass property
- [] fix query all users shows password field even after selecting property
+[x] check if user is deleted ,user can't  create booking  ,
+[x] fix query all users shows password field even after selecting 
+ property
+
+[x] fix book route create table even response send 400
+
+
+
 
 using nexauth on backend can make issued:
  -Configuration errors:
