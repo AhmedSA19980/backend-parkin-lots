@@ -6,10 +6,10 @@ const app = express();
 
 export default function (app:Application){
     app.get("/reservartiondetail", async (req: Request, res: Response) => {
-    const { bookId } = req.body;
+    const bookId = req.query.bookId ;
     const book_card = await prisma.booking.findUnique({
         where: {
-        id: bookId,
+        id: Number(bookId),
         },
         include: {
         user:{select:
@@ -21,12 +21,13 @@ export default function (app:Application){
         },
         
     });
-    if (book_card?.id) {
-           
-            return res.status(200).json({ book: book_card });
+    if (book_card) {
+       
+        return res.status(200).json({ book: book_card }); 
 
+    }else{
+        return res.status(400).json({ erorr: "reserveration is not found" });       
     }
-     return res.status(400).json({ erorr: "reserveration is not found" });
     });
    
 }
