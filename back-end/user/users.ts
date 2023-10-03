@@ -18,9 +18,5 @@ export default function(app:Application){
         
         return res.status(200).json({users:query_all_users})
 
-    })
+      })
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> master
