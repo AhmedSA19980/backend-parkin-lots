@@ -65,6 +65,7 @@ export  function Book_Lot(app: Application) {
        return res.status(400).json({error:"user id deleted"})
     }
 
+<<<<<<< HEAD
     /**/
     
    
@@ -81,6 +82,9 @@ export  function Book_Lot(app: Application) {
      } catch (err:any) {
        return res.status(400).json({ error: err.message });
      }*/
+=======
+
+>>>>>>> main
 
     if (parkinglot_id?.id) {
       if (
@@ -140,6 +144,7 @@ export  function Book_Lot(app: Application) {
 }
 
 
+<<<<<<< HEAD
 /**else {
     
       
@@ -154,3 +159,5 @@ export  function Book_Lot(app: Application) {
           });
           
       } */
+=======
+>>>>>>> main
