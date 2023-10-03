@@ -143,21 +143,3 @@ export  function Book_Lot(app: Application) {
   });
 }
 
-
-<<<<<<< HEAD
-/**else {
-    
-      
-          updateParkingLotCapacityUsed = await prisma.parkinglot.update({
-            where: { id: parkinglot_id!.id },
-            data: { capacityUsed: { increment: 1 } },
-          });
-        
-          return res.status(200).json({
-            parking: updateParkingLotCapacityUsed,
-            book: book_park,
-          });
-          
-      } */
-=======
->>>>>>> main
