@@ -1,0 +1,159 @@
+<mxfile host="65bd71144e">
+    <diagram id="S_UcnOW4UPGE8Q1zLub1" name="Page-1">
+        <mxGraphModel dx="1706" dy="1551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;fontColor=#000000;" parent="1" source="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="-80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=none;html=1;fontColor=#FFFFFF;" parent="1" source="2" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;The forumla of calculating the parking lots&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px; background-color: rgb(255, 255, 255);&quot; class=&quot;language-javascript&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; hourlyRate = &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; minutes = &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;20&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; hours = minutes / &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;60&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; cost = hours * hourlyRate;&lt;/font&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px; background-color: rgb(255, 255, 255);&quot; class=&quot;language-javascript&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot; class=&quot;language-javascript&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;In this case, the cost would be&amp;nbsp;&lt;code style=&quot;background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 0px 2px; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 4px; padding: 1px 4px; box-sizing: border-box;&quot;&gt;(20 / 60) * 5 = 1.67&lt;/code&gt;&lt;span style=&quot;font-family: -apple-system, Roboto, SegoeUI, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;Meiryo UI&amp;quot;, Meiryo, &amp;quot;Arial Unicode MS&amp;quot;, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp;dollars&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-90" y="-10" width="520" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="EXample if client want to rent for&amp;nbsp; 20 min&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="-115" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;BOOKINT&amp;nbsp; table&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px; background-color: rgb(255, 255, 255);&quot; class=&quot;language-javascript&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; hourlyRate = &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; minutes = &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;20&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; hours = minutes / &lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-number&quot;&gt;60&lt;/span&gt;;&lt;br&gt;&lt;span style=&quot;font-variation-settings: var(--cib-type-subtitle1-font-variation-settings);&quot; class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; cost = hours * hourlyRate;&lt;/font&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px; background-color: rgb(255, 255, 255);&quot; class=&quot;language-javascript&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre style=&quot;margin-top: 0px; margin-bottom: 4px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border-radius: 8px; padding: 10px; box-sizing: border-box; border: 1px solid var(--cib-color-neutral-stroke); font-size: 16px; text-align: start;&quot;&gt;&lt;code style=&quot;font-size: 14px;&quot; class=&quot;language-javascript&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;In this case, the cost would be&amp;nbsp;&lt;code style=&quot;background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 0px 2px; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 4px; padding: 1px 4px; box-sizing: border-box;&quot;&gt;(20 / 60) * 5 = 1.67&lt;/code&gt;&lt;span style=&quot;font-family: -apple-system, Roboto, SegoeUI, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;Meiryo UI&amp;quot;, Meiryo, &amp;quot;Arial Unicode MS&amp;quot;, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp;dollars&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="320" width="520" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;" parent="1" source="10" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="1" source="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="190" y="660" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="700" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;" parent="1" source="11" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;" parent="1" source="11" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="110" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Booked" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="730" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="delete book" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="325" y="695" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=none;html=1;" parent="1" source="15" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="start-end time" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="880" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;" parent="1" source="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="910" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;" parent="1" source="16" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="parklots info" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="880" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="calc the price&amp;nbsp;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="880" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="-capacity&amp;nbsp;&lt;br&gt;hourlyrate&lt;br&gt;etc.." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="1020" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="cancel" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="590" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" parent="1" source="27" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="27" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="800" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="860"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="Strip" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="990" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="33" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;b&gt;Capacity checks&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="-660" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="34" target="36">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="-600" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="36" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="36">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="330" y="-550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="1-capacity:int&lt;br&gt;2-capacityUsed:int" style="whiteSpace=wrap;html=1;fillColor=none;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="-570" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;" edge="1" parent="1" source="40">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="-480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;" edge="1" parent="1" source="40" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="capacutyuded != capacity" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="-575" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="parking Lots are full with cars" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="-490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;" edge="1" parent="1" source="43">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="-600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="capacityused +=1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="-575" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="45" target="42">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="if ==" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="365" y="-545" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" style="edgeStyle=none;html=1;" edge="1" parent="1" source="48">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="-540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;html=1;" edge="1" parent="1" source="48">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="420" y="-580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="endTime&amp;nbsp; is exceeded&amp;nbsp;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="-660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="capacityUded -=1&lt;br&gt;until &amp;gt;= 0&amp;nbsp;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="-530" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
