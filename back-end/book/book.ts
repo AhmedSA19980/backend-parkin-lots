@@ -65,24 +65,7 @@ export  function Book_Lot(app: Application) {
        return res.status(400).json({error:"user id deleted"})
     }
 
-<<<<<<< HEAD
-    /**/
-    
-   
-       
 
-    /* try {
-       const paymentIntent = await stripe.paymentIntents.create({
-         amount: Math.round(total_cost * 100), // Convert to cents
-         currency: "usd",
-         customer:customer,
-         payment_method: paymentmethodId,
-         confirm: true,
-       });
-     } catch (err:any) {
-       return res.status(400).json({ error: err.message });
-     }*/
-=======
 
 >>>>>>> main
 
