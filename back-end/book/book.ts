@@ -67,6 +67,7 @@ export  function Book_Lot(app: Application) {
 
 
 
+
     if (parkinglot_id?.id) {
       if (
         parkinglot_id.capacityUsed < 0 ||
@@ -123,5 +124,4 @@ export  function Book_Lot(app: Application) {
     
   });
 }
-
 
