@@ -67,7 +67,6 @@ export  function Book_Lot(app: Application) {
 
 
 
->>>>>>> main
 
     if (parkinglot_id?.id) {
       if (
