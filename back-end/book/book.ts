@@ -65,22 +65,7 @@ export  function Book_Lot(app: Application) {
        return res.status(400).json({error:"user id deleted"})
     }
 
-    /**/
-    
-   
-       
 
-    /* try {
-       const paymentIntent = await stripe.paymentIntents.create({
-         amount: Math.round(total_cost * 100), // Convert to cents
-         currency: "usd",
-         customer:customer,
-         payment_method: paymentmethodId,
-         confirm: true,
-       });
-     } catch (err:any) {
-       return res.status(400).json({ error: err.message });
-     }*/
 
     if (parkinglot_id?.id) {
       if (
@@ -140,17 +125,3 @@ export  function Book_Lot(app: Application) {
 }
 
 
-/**else {
-    
-      
-          updateParkingLotCapacityUsed = await prisma.parkinglot.update({
-            where: { id: parkinglot_id!.id },
-            data: { capacityUsed: { increment: 1 } },
-          });
-        
-          return res.status(200).json({
-            parking: updateParkingLotCapacityUsed,
-            book: book_park,
-          });
-          
-      } */
