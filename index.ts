@@ -6,6 +6,7 @@ import create_user from "./back-end/user/adduser";
 import update_user from "./back-end/user/update";
 import book_lot from "./back-end/book/book";
 
+
 import query_users from "./back-end/user/users"
 import query_user from "./back-end/user/query"
 import get_park from "./back-end/lots/query";
@@ -22,7 +23,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 query_book(app)
-
 create_user(app)
 update_user(app)
 query_user(app)
@@ -41,8 +41,8 @@ app.get("/", (req:Request, res:Response) => {
   res.send("Hello, world!");
  
 });
-
 setInterval(() => flashoutExpiredBookingTime(), 60 * 1000); 
+
  
 app.listen(4000, () => 
   console.log(`
