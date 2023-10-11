@@ -22,7 +22,7 @@ https://blog.logrocket.com/password-hashing-node-js-bcrypt/
 
 [x] fix book route create table even response send 400
 
-
+[] redesign book function route to class route .The clean code is the purpose 
 
 
 using nexauth on backend can make issued:
