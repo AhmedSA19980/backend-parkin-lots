@@ -2,9 +2,7 @@ import {PrismaClient } from "@prisma/client";
 import { book } from "../calc/calcuate";
 const prisma = new PrismaClient();
 import express, { Application, Request, Response } from "express";
-import { updateParkingLotCapacity } from "../lib/timebooking";
 import { isValidTime } from "../lib/validTime";
-import Stripe from "stripe";
 import PAYMENTINTENT from '../lib/pay'
 
 
@@ -27,7 +25,7 @@ type booking = {
   
 };
 
-export  function Book_Lot(app: Application) {
+export default function Book_Lot(app: Application) {
   app.post("/booking", async (req: Request, res: Response) => {
     
     const {
