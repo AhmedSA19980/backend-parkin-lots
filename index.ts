@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 
 import add_park from "./back-end//lots/park";
 import delete_park from "./back-end/lots/delete"
-import create_user from "./back-end/user/user";
+import create_user from "./back-end/user/adduser";
 import update_user from "./back-end/user/update";
 import book_lot from "./back-end/book/book";
 
