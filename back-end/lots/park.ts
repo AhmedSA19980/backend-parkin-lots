@@ -1,6 +1,6 @@
 import express, { Application,Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import { FieldValidation } from "../lib/lotValidation";
+import { FieldValidation } from "../lib/lotvalidation";
 const app = express.Router();
 const prisma = new PrismaClient();
 
@@ -15,7 +15,7 @@ type lots = {
 
 export default function(app:Application){
    
-  app.post("/parkinglots", async (req, res) => {
+  app.post("/parkinglots", async (req:Request, res:Response) => {
       const { location, capacity, hourlyRate, capacityUsed }:lots = req.body;
       
       const capacityValidation = FieldValidation(capacity)
