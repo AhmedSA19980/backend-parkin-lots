@@ -14,19 +14,23 @@ export default function (app: Application, args?:any) {
     });
 
     // Update a user's name
-    if (!findUserByEmail) {
-      res.json("user not found! create user account");
+    if (findUserByEmail) {
+      const updatedUser = await prisma.user.update({
+        where: {
+          email: email,
+        },
+        data: {
+          name: name,
+          password: password,
+        },
+      });
+
+      res.json(updatedUser);  
+    }else {
+       res.json("user not found! create user account");
     }
-    const updatedUser = await prisma.user.update({
-      where: {
-        email: email,
-      },
-      data: {
-        name: name,
-        password: password,
-      },
-    });
-    res.json(updatedUser);
-    console.log(findUserByEmail);
+    
+     
+    
   });
 }
