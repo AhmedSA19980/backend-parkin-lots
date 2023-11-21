@@ -1,68 +1,95 @@
+
+import chai from "chai";
+import chaiHttp from "chai-http";
+import sinon from "sinon";
 import { PrismaClient } from "@prisma/client";
-import request from "supertest";
-import express from "express";
+import express, { Application } from "express";
 import update_user from "../../back-end/user/update";
 
-const app = express();
+const expect = chai.expect;
+chai.use(chaiHttp);
 
-app.use(express.json());
-update_user(app);
-
-
-// Mock the Prisma client
-jest.mock("@prisma/client", () => ({
-  PrismaClient: jest.fn().mockImplementation(() => ({
-    user: {
-      findUnique: jest.fn(),
-      update: jest.fn(),
-    },
-  })),
-}));
+describe("POST /update_existing user", () => {
+  let prismaStub: any;
+  let prismaInstance: any;
+  let app: Application;
 
 
-const prisma = new PrismaClient();
+  beforeEach(() => {
+    try {
+       console.log("beforeEach is starting ");
+        prismaInstance = new PrismaClient();
+       prismaStub = sinon.stub(prismaInstance.user, "findUnique").resolves({
+         email: "john2.doe@gmail.com",
+         name: "John2 Doe",
+         password: "password",
+       });
 
+       sinon.stub(prismaInstance.user, "update").resolves({
+         email: "john2.doe@gmail.com",
+         name: "Jhon22 Doe",
+         password: "password",
+       });
 
-describe ("update/user",()=>{
+      console.log("beforeEach is finished ");
+      app = express();
+      app.use(express.json());
+      update_user(app);
+    } catch (err) {
+      console.log("Error is", err);
+    }
+  });
+
+  afterEach(() => {
+    try {
+      console.log("afterEach is starting");
+      prismaStub.restore();
+      console.log("afterEach is finished");
+    } catch (err) {
+      console.log("Erorr after each", err);
+    }
+  });
+
+  it("should update a user", async () => {
     
-    it("it must update existing user", async () => {
-      const mockUser = {
-        email: "five@gmail.com",
-        name: "Alicefive1",
-        passowrd: "password999",
-      };
+    const userAfterUpdate = {
+      id: 105,
+      isuserdeleted: false,
+      email: "john2.doe@gmail.com",
+      name: "Jhon22 Doe",
+      password: "password",
+    };
 
-      (prisma.user.findUnique as jest.Mock).mockResolvedValue(mockUser);
+ 
 
-     (prisma.user.update as jest.Mock).mockResolvedValue({
-       email: "five@gmail.com",
-       name: "Alicefive2",
-       passowrd: "password9999",
-     });
+    prismaStub.resolves(userAfterUpdate);
 
-      const updateUserRes = await request(app).post("/update_user").send({
-        email: mockUser.email,
-        name: "Alicefive2",
-        passowrd: "password9999",
-      });
-      expect(updateUserRes.status).toEqual(200);
-      expect(updateUserRes.body.name).toEqual(updateUserRes.body.name);
-      expect(updateUserRes.body.password).toEqual(updateUserRes.body.passowrd);
-    });
+    const res = await chai
+      .request(app)
+      .post("/update_user")
+      .send(userAfterUpdate);
 
+    expect(res.status).to.equal(200);
+    expect(res.body).to.deep.equal(userAfterUpdate);
 
-    it ("return error if user not exist " , async()=>{
-        (prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-        const updateUserRes = await request(app).post("/update_user").send({
-          email: "notfuound@example",
-          //password: "updatepassword333",
-        });
-        expect(updateUserRes.status).toEqual(200);
-        expect(updateUserRes.body).toEqual(
-          "user not found! create user account"
-        );
+    /*sinon.assert.calledWith(prismaStub.update, {
+      where: { id: userAfterUpdate.id },
+      data: userAfterUpdate,
+    });*/
+  });
 
-    });
+  it("should return error message when user id not found !", async () => {
+    const user = {
+      email:""
+    };
+    prismaStub.resolves(user);
+    const res = await chai.request(app).post("/update_user").send(user);
+
+    expect(res.status).to.equal(400);
+    expect(res.body).to.deep.equal({error:"user not found! create user account"});
+  });
+
+  // Add more tests for validation errors...
+});
+
     
-
-})
